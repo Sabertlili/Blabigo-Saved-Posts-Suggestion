@@ -1,1 +1,1 @@
-# Blabigo-Saved-Posts-Suggestion
+# linkedin-saved-posts-organizer
