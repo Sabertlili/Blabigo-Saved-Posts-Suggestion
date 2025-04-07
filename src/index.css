@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom styles for the spatial view */
+.layout-edit-mode .tag-section {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.layout-edit-mode .tag-section:hover {
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.layout-edit-mode .section-header {
+  cursor: move;
+}
+
+/* Custom styles for dragging states */
+.dragging {
+  opacity: 0.8;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section-dragging {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+/* Animation for section highlighting */
+@keyframes highlight {
+  0% { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); }
+  50% { box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.6); }
+  100% { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); }
+}
+
+.highlight-section {
+  animation: highlight 0.3s ease-in-out;
+} 
